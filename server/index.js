@@ -12,6 +12,6 @@ app.get("/api/fortune", controller.getFortune);
 app.get("/api/time", controller.getTime);
 app.get("/api/luckynum", controller.getLuckyNum);
 app.get("/api/video", controller.getVideo);
-app.get("/api/age", controller.getAge);
+app.post("/api/age", controller.postAge);
 
 app.listen(4000, () => console.log("Server running on 4000"));

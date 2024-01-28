@@ -2,9 +2,30 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="container">
+    <div class = "section">
     <button id="complimentButton">Get a compliment</button>
+    <button id="fortuneButton">Get a fortune</button>
+    <button id="timeButton">Get current time</button>
+    <button id="luckyNum">Get your lucky number</button>
+    <button id="randomVideo">Get your video</button>
+    </div>
+    
+    <div class = "section">
+      <form action="http://localhost:4000/api/age" method="POST" id="ageForm">
+        <label for="ageEntered">Can you rent a car? Please enter you age</label>
+        <br>
+        <input type="text" name="ageEntered" id="ageEntered">
+      
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+ 
+    <div class = "section"> 
+    <iframe class ="iframe" width="400" height="350" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>

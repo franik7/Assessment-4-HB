@@ -1,10 +1,13 @@
 1) What is the difference between a client and a server? In the HTTP protocol,
 which one of these sends requests, and which one sends responses?
 
+I think of a client as something that needs to get some kind of information and server is something that provides the information to the client. In the HTTP protocol, the client sends requests to the server, and the server sends responses back to the client. 
+
 
 -------------------
 2) What do we mean by a "route" on a server?
 
+Route on a server means the path to where the specific data is located. I think of server as a tree with many branches. Each branch is therefore a route that contains different information. When we send a request to the route (the tree branch), the server sends a response with the information located on the route (tree branch). If the route is not found, the server sends a 404 error response. 
 
 
 -------------------
@@ -12,8 +15,11 @@ which one of these sends requests, and which one sends responses?
 a URL like https://facebook.com/home in their browser, but are out of order.
 Put them in the correct order from start to finish.
 
-- The server runs a function associated to the route /home, which produces some HTML
-- The user's browser displays the HTML it recieved
-- The server sends that HTML back to the user's browser as a response
-- The user's browser sends a request to a Facebook server for the route /home
 - The User types in https://facebook.com/home and hits enter
+- The user's browser sends a request to a Facebook server for the route /home
+- The server runs a function associated to the route /home, which produces some HTML
+- The server sends that HTML back to the user's browser as a response
+- The user's browser displays the HTML it recieved
+
+
+

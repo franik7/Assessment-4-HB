@@ -62,5 +62,16 @@ module.exports = {
         } else if (age > 130) {
             res.status(200).send("Hello, alien");
         }
+    },
+
+    getWine: (req, res) => {
+    const { meat } = req.query;
+       console.log(meat)
+
+       if(meat === "chicken"){
+        res.status(200).send("White wine");
+       } else {
+        res.status(200).send("Red wine");
+       }
     }
 }

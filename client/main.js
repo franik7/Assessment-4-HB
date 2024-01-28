@@ -4,6 +4,7 @@ const timeBtn = document.querySelector("#timeButton")
 const luckyNumber = document.querySelector("#luckyNum")
 const randomVideo = document.querySelector("#randomVideo")
 const ageForm = document.querySelector("#ageForm")
+const wineForm = document.querySelector("#wineForm")
 
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment/")
@@ -69,6 +70,23 @@ const ageFormSubmit = (e) => {
     .catch(err => console.log(err))
 };
 
+const getWine = (e) => {
+    e.preventDefault();
+    const selectedMeat = document.querySelector("#meat").value;
+    console.log(selectedMeat)
+
+    axios.get("http://localhost:4000/api/wine", {
+        params: {
+            meat: selectedMeat
+        }
+    })
+    .then(res => {
+        const data = res.data;
+        alert(data);
+    })
+    .catch(err => console.log(err))
+};
+
 
 complimentBtn.addEventListener('click', getCompliment)
 fortuneBtn.addEventListener('click', getFortune)
@@ -76,3 +94,4 @@ timeBtn.addEventListener('click', getTime)
 luckyNumber.addEventListener('click', getLuckyNum)
 randomVideo.addEventListener('click', getVideo)
 ageForm.addEventListener('submit', ageFormSubmit)
+wineForm.addEventListener('submit', getWine)

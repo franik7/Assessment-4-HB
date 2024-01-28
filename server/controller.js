@@ -27,6 +27,33 @@ module.exports = {
       
         res.status(200).send(timeNow);
     },
-  
+    getLuckyNum: (req, res) => {
+
+        let randomNum = Math.floor(Math.random() * 1000);
+        let message = `Your lucky number is: ${randomNum}`;
+      
+        res.status(200).send(message);
+    },
+
+    getVideo: (req, res) => {
+        const videos = ["jda_k6r9R1A", "YWwPR_JqWGE", "o-YBDTqX_ZU"];
+
+        let randomIndex = Math.floor(Math.random() * videos.length);
+        let randomVideo = videos[randomIndex];
+        let URL = "https://www.youtube.com/embed/"
+              
+        res.status(200).send(URL + randomVideo);
+    },
+
+    getAge: (req, res) => {
+        const videos = ["jda_k6r9R1A", "YWwPR_JqWGE", "o-YBDTqX_ZU"];
+
+        let randomIndex = Math.floor(Math.random() * videos.length);
+        let randomVideo = videos[randomIndex];
+        let URL = "https://www.youtube.com/embed/"
+              
+        res.status(200).send(URL + randomVideo);
+    },
+
 
 }
